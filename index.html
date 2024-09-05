@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Information Portal</title>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75" alt="Portal Logo">
+        <h1>Voter Information Portal</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Voter Search</h2>
+        <input type="text" id="search" placeholder="Enter Voter ID" />
+        <button onclick="searchVoter()">Search</button>
+
+        <div id="voter-info"></div>
+
+        <!-- Election Cards Section -->
+        <h2>Upcomming Elections</h1>
+        <div class="election-cards">
+            
+            <div class="card" style="background-image: url('https://img.naidunia.com/naidunia/ndnimg/14072020/14_07_2020-jammu.jpg');">
+                <div class="card-overlay">Jammu & Kashmir</div>
+            </div>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1605469237567-a39930679526?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFyeWFuYSUyQyUyMGluZGlhfGVufDB8fDB8fHww');">
+                <div class="card-overlay">Haryana</div>
+            </div>
+            <div class="card" style="background-image: url('https://www.fabhotels.com/blog/wp-content/uploads/2019/10/Maharashtra-Tourism_600.jpg');">
+                <div class="card-overlay">Maharashtra</div>
+            </div>
+            <div class="card" style="background-image: url('https://static.toiimg.com/photo/msid-24245804,width-96,height-65.cms');">
+                <div class="card-overlay">Delhi</div>
+            </div>
+            <div class="card" style="background-image: url('https://cdn.britannica.com/12/94612-050-B4EEB84A/temple-Buddhist-Mahabodhi-Bihar-India-Bodh-Gaya.jpg');">
+                <div class="card-overlay">Bihar</div>
+            </div>
+            <div class="card" style="background-image: url('https://img.nayatrip.com/images/state/big/ASSAM.jpg');">
+                <div class="card-overlay">Assam</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Voter Information Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const voters = [
+            {
+                "firstName": "Chodisetty",
+                "lastName": "Surya Trinadh",
+                "fatherName": "Veerababu",
+                "dateOfBirth": "2002-02-07",
+                "age": 22,
+                "nationality": "Indian",
+                "voterId": "XEK0365114",
+                "constituency": "Yanam - Puducherry",
+                "pollingLocation": "PWD Office, Yanam"
+            },
+            {
+                "firstName": "Padda",
+                "lastName": "Tejeswar Rao",
+                "fatherName": "Padda Govindha Rao",
+                "dateOfBirth": "2002-10-01",
+                "age": 21,
+                "nationality": "Indian",
+                "voterId": "XEK0365118",
+                "constituency": "Amadalavalasa",
+                "pollingLocation": "ZPHS, Amadalavalasa"
+            },
+            {
+                "firstName": "Kasimkota",
+                "lastName": "Kumar",
+                "fatherName": "Kasimkota Ramana",
+                "dateOfBirth": "2002-15-06",
+                "age": 22,
+                "nationality": "Indian",
+                "voterId": "XEK0365109",
+                "constituency": "Madugala",
+                "pollingLocation": "ZPHS, Madugala"
+            },
+            {
+                "firstName": "Kunchapu",
+                "lastName": "Deva Kumar",
+                "fatherName": "Kunchapu Ananda Rao",
+                "dateOfBirth": "2002-06-02",
+                "age": 22,
+                "nationality": "Indian",
+                "voterId": "XEK0365225",
+                "constituency": "Guntur",
+                "pollingLocation": "ZPHS, Guntur"
+            },
+            {
+                "firstName": "Degala",
+                "lastName": "Saranya",
+                "fatherName": "Degala Visweswara Rao",
+                "dateOfBirth": "2003-01-24",
+                "age": 21,
+                "nationality": "Indian",
+                "voterId": "XEK0365509",
+                "constituency": "Guntur",
+                "pollingLocation": "ZPHS, Guntur"
+            }
+        ];
+
+        function searchVoter() {
+            const searchValue = document.getElementById('search').value;
+            const voter = voters.find(voter => voter.voterId === searchValue);
+            const voterInfo = document.getElementById('voter-info');
+
+            if (voter) {
+                voterInfo.innerHTML = `
+                    <p><strong>First Name:</strong> ${voter.firstName}</p>
+                    <p><strong>Last Name:</strong> ${voter.lastName}</p>
+                    <p><strong>Father Name:</strong> ${voter.fatherName}</p>
+                    <p><strong>Date of Birth:</strong> ${voter.dateOfBirth}</p>
+                    <p><strong>Age:</strong> ${voter.age}</p>
+                    <p><strong>Nationality:</strong> ${voter.nationality}</p>
+                    <p><strong>Constituency:</strong> ${voter.constituency}</p>
+                    <p><strong>Polling Location:</strong> ${voter.pollingLocation}</p>
+                `;
+            } else {
+                voterInfo.innerHTML = '<p>No voter found with that ID.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
