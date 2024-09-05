@@ -1,0 +1,180 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 50px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            font-size: 24px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Main Content Styling */
+        .container {
+            max-width: 600px;
+            margin: 80px auto 100px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #search {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #voter-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        /* Election Cards Styling */
+        .election-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+        }
+         /* Responsive Styles */
+         @media (max-width: 1024px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+                height: 200px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            #search {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            .card {
+                height: 180px;
+            }
+        }
