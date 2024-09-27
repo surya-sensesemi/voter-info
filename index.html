@@ -62,7 +62,8 @@
                 "nationality": "Indian",
                 "voterId": "XEK0365114",
                 "constituency": "Yanam - Puducherry",
-                "pollingLocation": "PWD Office, Yanam"
+                "pollingLocation": "PWD Office, Yanam",
+                "image": "https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75"
             },
             {
                 "firstName": "Padda",
@@ -73,7 +74,9 @@
                 "nationality": "Indian",
                 "voterId": "XEK0365118",
                 "constituency": "Amadalavalasa",
-                "pollingLocation": "ZPHS, Amadalavalasa"
+                "pollingLocation": "ZPHS, Amadalavalasa",
+                "image": "https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75"
+
             },
             {
                 "firstName": "Kasimkota",
@@ -84,7 +87,9 @@
                 "nationality": "Indian",
                 "voterId": "XEK0365109",
                 "constituency": "Madugala",
-                "pollingLocation": "ZPHS, Madugala"
+                "pollingLocation": "ZPHS, Madugala",
+                "image": "https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75"
+
             },
             {
                 "firstName": "Kunchapu",
@@ -95,7 +100,10 @@
                 "nationality": "Indian",
                 "voterId": "XEK0365225",
                 "constituency": "Guntur",
-                "pollingLocation": "ZPHS, Guntur"
+                "pollingLocation": "ZPHS, Guntur",
+
+                "image": "https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75"
+
             },
             {
                 "firstName": "Degala",
@@ -106,7 +114,9 @@
                 "nationality": "Indian",
                 "voterId": "XEK0365509",
                 "constituency": "Guntur",
-                "pollingLocation": "ZPHS, Guntur"
+                "pollingLocation": "ZPHS, Guntur",
+                "image": "https://sensesemi.in/_next/image?url=%2Fimages%2Flogo-white.png&w=96&q=75"
+
             }
         ];
 
@@ -117,6 +127,7 @@
 
             if (voter) {
                 voterInfo.innerHTML = `
+                    <img src="${voter.image}" width="200" height="200" />
                     <p><strong>First Name:</strong> ${voter.firstName}</p>
                     <p><strong>Last Name:</strong> ${voter.lastName}</p>
                     <p><strong>Father Name:</strong> ${voter.fatherName}</p>
